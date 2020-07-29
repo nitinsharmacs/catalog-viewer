@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c9d7d4eb.chunk.css",
+    "main.js": "/static/js/main.41bcd300.chunk.js",
+    "main.js.map": "/static/js/main.41bcd300.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.da678e52.js",
+    "runtime-main.js.map": "/static/js/runtime-main.da678e52.js.map",
+    "static/js/2.783b1b16.chunk.js": "/static/js/2.783b1b16.chunk.js",
+    "static/js/2.783b1b16.chunk.js.map": "/static/js/2.783b1b16.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2dfa05c0cfbb107f075dad7d0c877ddf.js": "/precache-manifest.2dfa05c0cfbb107f075dad7d0c877ddf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c9d7d4eb.chunk.css.map": "/static/css/main.c9d7d4eb.chunk.css.map",
+    "static/js/2.783b1b16.chunk.js.LICENSE.txt": "/static/js/2.783b1b16.chunk.js.LICENSE.txt",
+    "static/media/pink-light.jpeg": "/static/media/pink-light.31b55a59.jpeg",
+    "static/media/right_icon.png": "/static/media/right_icon.eae409a6.png",
+    "static/media/tea-light.jpeg": "/static/media/tea-light.4cd2b211.jpeg",
+    "static/media/white-light.jpeg": "/static/media/white-light.ececf39b.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da678e52.js",
+    "static/js/2.783b1b16.chunk.js",
+    "static/css/main.c9d7d4eb.chunk.css",
+    "static/js/main.41bcd300.chunk.js"
+  ]
+}

@@ -41,8 +41,8 @@ class App extends Component {
     this.state = {
       title: 'Catalog Viewer',
       catalogs: [...catalogs],
-      currentIndex: -1,
-      catalogSelected: catalogs[3],
+      currentIndex: 0,
+      catalogSelected: catalogs[0],
       slideActive: false,
       slideTimer: null,
       slideDuration: 3000,
@@ -56,28 +56,60 @@ class App extends Component {
   }
 
   selectedCatalog(index) {
-
+    this.setState({catalogSelected:catalogs[+index], currentIndex:+index});
+    this.resetSlideTimer(this.state.slideActive);
   }
 
   previousClick() {
-
+    let index = this.state.currentIndex-1===-1?catalogs.length-1:this.state.currentIndex-1;
+    this.setState({catalogSelected:catalogs[index],currentIndex:index})
+    this.resetSlideTimer(this.state.slideActive);
   }
 
   nextClick() {
-
+    let index = this.state.currentIndex+1===catalogs.length?0:this.state.currentIndex+1;
+    this.setState(prevState=>{
+      return {
+        catalogSelected:catalogs[index],
+        currentIndex:index
+      };
+    })  
+    this.resetSlideTimer(this.state.slideActive);
   }
 
   slideChange(event) {
-
+    if(event.target.checked){
+      this.setState({
+        slideActive:true,
+        slideTimer:this.onSlideChange()
+      })
+    } else {
+      clearInterval(this.state.slideTimer)
+      this.setState({slideActive:false, slideTimer:null});
+    }
   }
 
   resetSlideTimer(isActive = false) {
-
+    if(isActive){
+      clearInterval(this.state.slideTimer);
+      this.setState({slideTimer:this.onSlideChange()});
+    }
+      
   }
 
   onSlideChange() {
-
+    let index;
+    return setInterval(()=>{
+          index = this.state.currentIndex+1===catalogs.length?0:this.state.currentIndex+1;
+              this.setState(prevState=>{
+                return {
+                  catalogSelected:catalogs[index],
+                  currentIndex:index
+                };
+              }) 
+        }, this.state.slideDuration);
   }
+
 
   render() {
     return (
